@@ -25,6 +25,7 @@ body {
     border-radius: 20px 10px 10px 20px;
     border: solid 5px #000000;
     transform: translateX(-100%) skewY(15deg);
+    z-index: 10;
 }
 
 /* Cara superior */
@@ -38,6 +39,7 @@ body {
     border-color: #000000;
     border-width: 5px;
     transform: translateY(-200%) translateX(73.5%) skewY(15deg) skewX(-45deg);
+    z-index: 5;
 }
 
 /* Cara lateral derecha */
@@ -253,21 +255,21 @@ body {
 .circle-button:nth-child(2) {
     background-color: #0205ae;
     width: 8%;
-    height: 11%;
+    height: 12%;
     transform: translateX(850%) translateY(-110%);
 }
 
 .circle-button:nth-child(3) {
     background-color: #07f020;
     width: 9%;
-    height: 12%;
+    height: 14%;
     transform: translateX(800%) translateY(60%);
 }
 
 .circle-button:nth-child(4) {
     background-color: #f4055a;
     width: 15%;
-    height: 19%;
+    height: 26%;
     transform: translateX(400%) translateY(80%);
 }
 
@@ -282,7 +284,7 @@ body {
 
 .ellipse-button {
     width: 12%;
-    height: 5%;
+    height: 6%;
     border-radius: 20px;
     border: solid 2px #000000;
     background-color: #000e6b;
@@ -308,24 +310,93 @@ body {
     width: 25%;
     height: 30%;
     background-color: #000000;
-    clip-path: polygon(40% 40%, 10% 100%, 60% 100%);
-    transform: translateX(240%) translateY(-150%);
+    clip-path: polygon(40% 30%, 10% 100%, 60% 100%);
+    transform: translateX(240%) translateY(-170%);
 }
 
 .border-triangle {
     width: 80%;
     height: 80%;
     background-color: #12dfe0;
-    clip-path: polygon(40% 40%, 10% 100%, 60% 100%);
+    clip-path: polygon(40% 30%, 10% 100%, 60% 100%);
     transform: translateX(9%) translateY(20%);
 }
 
 .triangle-relief {
     width: 16%;
-    height: 3%;
+    height: 3.5%;
     background-color: #12dfe0;
     border-style: solid solid none solid;
     border-width: 2px;
     border-color: #000000;
-    transform: translateX(368%) translateY(-1370%) rotateZ(70deg) rotateY(-40deg);
+    transform: translateX(368%) translateY(-1320%) rotateZ(68deg) rotateY(-40deg);
 }
+
+.plus-button {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    height: 10%;
+}
+
+.plus-shape {
+    display: grid;
+    grid-template-columns: 20% 40% 25%; 
+    grid-template-rows: 25% 40% 25%; 
+    gap: 0;
+    width: 35px;
+    height: 35px;
+    transform: translateY(100%);
+}
+
+.plus-shape:first-child {
+    transform: translateX(200%) translateY(1000%) scale(1.8);
+}
+
+.plus-shape:last-child {
+    transform: translateX(90%) translateY(1005%) scale(1.7);
+}
+
+/* Celdas que forman el signo "+" */
+.fill {
+    background-color: #ffda0d; /* Color del símbolo */
+}
+
+/* Bordes del signo "+" */
+
+.fill:first-child{
+    border-style: solid solid solid none;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.fill:nth-child(2){
+    border-style: solid solid none solid;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.fill:nth-child(4){
+    border-style: solid none solid solid;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.fill:nth-child(5){
+    border-style: none;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.fill:nth-child(6){
+    border-style: solid solid solid none;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+.fill:nth-child(8){
+    border-style: none solid solid solid;
+    border-width: 1px;
+    border-color: #000000;
+}
+
