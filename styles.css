@@ -29,6 +29,7 @@ body {
 
 /* Cara superior */
 .top-side {
+    display: flex;
     width: 305px;
     height: 135px;
     background-color: #4be1b5;
@@ -42,6 +43,7 @@ body {
 /* Cara lateral derecha */
 .right-side {
     display: flex;
+    flex-direction: column;
     width: 150px;
     height: 455px;
     background-color: #439c83;
@@ -53,16 +55,16 @@ body {
 }
 
 .right-side::before {
+    display: flex;
     content : "B MO";
     font-family: 'Chango';
-    font-size: 400%;
+    font-size: 353%;
     writing-mode: vertical-rl;
     -webkit-text-stroke: 5px #000000;
     color: #041725;
-    transform:  translateY(35%) translateX(75%);
+    transform: translateX(-20%) translateY(100%);
 }
 
-/*------------------------------------*/
 
 /*------------ Rostro ------------ */
 
@@ -117,8 +119,8 @@ body {
     height: 30%;
     background-color: #45b0b3;
     border-radius: 50px 50px 20px 20px;
-    transform: translateY(240%) translateX(8%) skewY(25deg);
     border: solid 3px #000000;
+    transform: translateY(115%) translateX(210%) skewY(25deg);
 }
 
 /* Dedos */
@@ -190,3 +192,36 @@ body {
     border-width: 5px;
     transform: translateX(-62%) translateY(45%) skewX(47deg) scaleX(1.1);
 }
+
+
+/* ------------ Speaker ------------ */
+
+.speaker {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 40%;
+    height: 25%;
+    place-items: center;
+    transform: translateX(70%) translateY(-260%);
+  }
+  
+  .dot {
+    width: 8px;
+    height: 10px;
+    background: #002a1a;
+    border-radius: 50%;
+    border: solid 1px #000000;
+  }
+  
+  /* Posicionamos los puntos en la cuadrícula */
+  .p1 { grid-area: 1 / 2; } /* Arriba Izquierda */
+  .p2 { grid-area: 1 / 4; } /* Arriba Derecha */
+  .p3 { grid-area: 2 / 1; } /* Izquierda */
+  .p4 { grid-area: 2 / 3; } /* Centro */
+  .p5 { grid-area: 2 / 5; } /* Derecha */
+  .p6 { grid-area: 3 / 2; } /* Abajo Izquierda */
+  .p7 { grid-area: 3 / 4; } /* Abajo Derecha */
+  
+  
