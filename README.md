@@ -7,3 +7,6 @@
 
 ## Autor
 - Diego Leiva - 21752
+
+## Preview
+![title](Images/Comparison.png)
