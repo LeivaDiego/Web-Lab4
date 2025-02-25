@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b3e5fc;
+}
+
+
+/* BMO */
+.bmo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Cara frontal */
+.front-side {
+    display: flex;
+    width: 250px;
+    height: 400px;
+    background-color: #49bb9f;
+    border-radius: 20px 10px 10px 20px;
+    border: solid 5px #000000;
+    transform: translateX(-100%) skewY(15deg);
+}
+
+/* Cara superior */
+.top-side {
+    width: 255px;
+    height: 115px;
+    background-color: #4be1b5;
+    border-radius: 20px 0 0 0;
+    border-style: solid none none solid;
+    border-color: #000000;
+    border-width: 5px;
+    transform: translateY(-200%) translateX(76%) skewY(15deg) skewX(-45deg);
+}
+
+.right-side {
+    display: flex;
+    width: 128px;
+    height: 395px;
+    background-color: #439c83;
+    border-radius: 0 20px 20px 0;
+    border-style: none solid solid none;
+    border-color: #000000;
+    border-width: 5px;
+    transform: translateX(97%) translateY(-2.9%) skewY(-36deg) ;
+}
+
